@@ -11,6 +11,8 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --layout-bg:  #061641;
+    --header-bg: #432275;
   }
 }
 

@@ -19,11 +19,11 @@ export default function NewReleaseState({data}) {
                         {data.all.slice(0,13).map((item) => (
                             <div key={item.encodeId} className="flex flex-col">
                                 <div className="flex p-3">
-                                    <div className="w-[60px] h-[60px]">
+                                    <div className="w-[60px] h-[60px] flex-none">
                                         <Image className="rounded-md" src={item.thumbnailM} width={0} height={0} sizes="100vw" quality={100} loading="eager" style={{width: "100%", height: "100%"}} alt="Image Song" ></Image>
                                     </div>
-                                    <div className="pl-3 pr-3">
-                                        <h1 className=" text-sm mb-1">{item.title}</h1>
+                                    <div className="pl-3 pr-3 w-[80%]">
+                                        <h1 className=" text-sm mb-1 truncate">{item.title}</h1>
                                         <div className="text-xs mb-1 text-[#FFFFFF80]"><a href="#">{item.artistsNames}</a></div>
                                         <div className="text-xs text-[#FFFFFF80]">{getDuration(item.duration)}</div>
                                     </div>
@@ -41,8 +41,8 @@ export default function NewReleaseState({data}) {
                                     <div className="w-[60px] h-[60px]">
                                         <Image className="rounded-md" src={item.thumbnailM} width={0} height={0} sizes="100vw" quality={100} loading="eager" style={{width: "100%", height: "100%"}} alt="Image Song" ></Image>
                                     </div>
-                                    <div className="pl-3 pr-3">
-                                        <h1 className=" text-sm mb-1">{item.title}</h1>
+                                    <div className="pl-3 pr-3 w-[80%]">
+                                        <h1 className=" text-sm mb-1 truncate">{item.title}</h1>
                                         <div className="text-xs mb-1 text-[#FFFFFF80]"><a href="#">{item.artistsNames}</a></div>
                                         <div className="text-xs text-[#FFFFFF80]">{getDuration(item.duration)}</div>
                                     </div>
@@ -60,8 +60,8 @@ export default function NewReleaseState({data}) {
                                     <div className="w-[60px] h-[60px]">
                                         <Image className="rounded-md" src={item.thumbnailM} width={0} height={0} sizes="100vw" quality={100} loading="eager" style={{width: "100%", height: "100%"}} alt="Image Song" ></Image>
                                     </div>
-                                    <div className="pl-3 pr-3">
-                                        <h1 className=" text-sm mb-1">{item.title}</h1>
+                                    <div className="pl-3 pr-3 w-[80%]">
+                                        <h1 className=" text-sm mb-1 truncate">{item.title}</h1>
                                         <div className="text-xs mb-1 text-[#FFFFFF80]"><a href="#">{item.artistsNames}</a></div>
                                         <div className="text-xs text-[#FFFFFF80]">{getDuration(item.duration)}</div>
                                     </div>
@@ -79,8 +79,8 @@ export default function NewReleaseState({data}) {
                                     <div className="w-[60px] h-[60px]">
                                         <Image className="rounded-md" src={item.thumbnailM} width={0} height={0} sizes="100vw" quality={100} loading="eager" style={{width: "100%", height: "100%"}} alt="Image Song" ></Image>
                                     </div>
-                                    <div className="pl-3 pr-3">
-                                        <h1 className=" text-sm mb-1">{item.title}</h1>
+                                    <div className="pl-3 pr-3 w-[80%]">
+                                        <h1 className=" text-sm mb-1 truncate">{item.title}</h1>
                                         <div className="text-xs mb-1 text-[#FFFFFF80]"><a href="#">{item.artistsNames}</a></div>
                                         <div className="text-xs text-[#FFFFFF80]">{getDuration(item.duration)}</div>
                                     </div>
@@ -94,9 +94,9 @@ export default function NewReleaseState({data}) {
     return (
         <div className="">
             <div className="text-xs flex gap-2">
-                <button className={`${dataType === "all" && "bg-[#3560F5] border-[#3560F5] "} pl-3 pr-3 pt-2 pb-2 border rounded-full  uppercase w-[90px]`} onClick={() => handleOnClick("all")}><p>Tất cả</p></button>
-                <button className={`${dataType === "vPop" && "bg-[#3560F5] border-[#3560F5] "} pl-3 pr-3 pt-2 pb-2 border rounded-full  uppercase w-[90px]`} onClick={() => handleOnClick("vPop")}><p>Việt Nam</p></button>
-                <button className={`${dataType === "others" && "bg-[#3560F5] border-[#3560F5] "} pl-3 pr-3 pt-2 pb-2 border rounded-full  uppercase w-[90px]`} onClick={() => handleOnClick("others")}><p>Quốc tế</p></button>
+                <button className={`${dataType === "all" ? "bg-[#3560F5] border-[#3560F5]" : "border-gray-700"} pl-3 pr-3 pt-[6px] pb-[6px] border rounded-full  uppercase w-[90px]`} onClick={() => handleOnClick("all")}><p>Tất cả</p></button>
+                <button className={`${dataType === "vPop" ? "bg-[#3560F5] border-[#3560F5]" : "border-gray-700"} pl-3 pr-3 pt-[6px] pb-[6px] border rounded-full  uppercase w-[90px]`} onClick={() => handleOnClick("vPop")}><p>Việt Nam</p></button>
+                <button className={`${dataType === "others" ? "bg-[#3560F5] border-[#3560F5] " : "border-gray-700"} pl-3 pr-3 pt-[6px] pb-[6px] border rounded-full  uppercase w-[90px]`} onClick={() => handleOnClick("others")}><p>Quốc tế</p></button>
             </div>           
             {renderContent()}
         </div>

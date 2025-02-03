@@ -38,12 +38,13 @@ export default function PlaylistCard() {
                     <div className={`overflow-x-auto flex flex-nowrap mb-8 w-full h-full container`}>
                         {(pathName.includes("/top100") ? playlist.items : playlist.items.slice(0, 5) ).map((item) => (
                             <div key={item.encodeId} className="flex-none w-1/2 max-w-xs pl-1 pr-1">
-                                <div className="rounded-sm overflow-hidden w-full">
+                                <div className="rounded-sm overflow-hidden w-full relative">
+                                    <a href={`${item.link}`} className="absolute top-0 left-0 right-0 bottom-0"></a>
                                     <Image src={item.thumbnail} alt="Image Playlist" width={0} height={0} sizes="100vw" quality={100} loading="eager" style={{width: "100%", height: "100%"}} />
                                 </div>
                                 <div className="mt-3 w-full">
                                     <span className="text-sm truncate block"><a href="#" className="leading-relaxed">{item.title}</a></span>
-                                    <div className="text-sm text-[#FFFFFF80] cursor-pointer overflow-hidden leading-normal w-full">
+                                    <div className="text-sm text-[#FFFFFF80] cursor-pointer overflow-hidden leading-normal w-full mt-1">
                                         {item.artists.slice(0, 3).map((artist, index) => (
                                             <span key={artist.id} className=""><a href="#" className="">{artist.name}{item.artists.length === 1 ? "" : (index < 2 ? ", " : "" )}</a></span>
                                         ))}

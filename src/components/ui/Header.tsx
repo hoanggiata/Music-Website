@@ -6,9 +6,9 @@ export default function Header(){
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     return (
         <>
-        <header className="relative top-0 left-0 right-0 z-50 p-3">
+        <header className="lg:ml-64 relative top-0 left-0 right-0 p-3">
             <div className="flex justify-between items-center">
-                <button className="flex justify-center items-center rounded-[50%] bg-alpha-bg w-10 h-10 mr-3" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
+                <button className="md:hidden flex justify-center items-center rounded-[50%] bg-alpha-bg w-10 h-10 mr-3" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
                     <Image src={"/ui/sort_ic_icon.png"} alt="Hamburger Menu" width={20} height={40}></Image>
                 </button>
                 <div className="flex max-w-[440px] h-9 mr-3 flex-1 bg-alpha p-1 rounded-[83px]">

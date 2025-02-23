@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-color: #F0F0F0;
+  --layout-bg: #061641; /* Màu nền cố định */
+  --header-bg: #432275;
+  --alpha-bg: #FFFFFF1A;
+  --secondary-color: #FFFFFF80;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --primary-color: #F0F0F0;

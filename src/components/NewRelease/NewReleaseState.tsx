@@ -15,7 +15,7 @@ export default function NewReleaseState({data}) {
         switch (dataType) {
             case "all":
                 return (
-                    <div className="mt-7">
+                    <div className="mt-7 grid grid-cols-1 md:grid-cols-4 gap-2">
                         {data.all.slice(0,13).map((item) => (
                             <div key={item.encodeId} className="flex flex-col">
                                 <div className="flex p-3">
@@ -34,7 +34,7 @@ export default function NewReleaseState({data}) {
                 );
             case "vPop":
                 return (
-                    <div className="mt-7">
+                    <div className="mt-7 grid grid-cols-1 md:grid-cols-4 gap-2">
                         {data.vPop.slice(0,13).map((item) => (
                             <div key={item.encodeId} className="flex flex-col">
                                 <div className="flex p-3">
@@ -53,7 +53,7 @@ export default function NewReleaseState({data}) {
                 );
             case "others":
                 return (
-                    <div className="mt-7">
+                    <div className="mt-7 grid grid-cols-1 md:grid-cols-4 gap-2">
                         {data.others.slice(0,13).map((item) => (
                             <div key={item.encodeId} className="flex flex-col">
                                 <div className="flex p-3">
@@ -72,7 +72,7 @@ export default function NewReleaseState({data}) {
                 );
             default: 
                 return (
-                    <div className="mt-7">
+                    <div className="mt-7 grid grid-cols-1 md:grid-cols-4 gap-2">
                         {data.all.slice(0,13).map((item) => (
                             <div key={item.encodeId} className="flex flex-col">
                                 <div className="flex p-3">

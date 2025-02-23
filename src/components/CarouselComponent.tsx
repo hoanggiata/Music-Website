@@ -30,7 +30,7 @@ export default function CarouselComponent() {
     return (
         <>
             {data.length === 0 ? "" :
-                <div className="h-[37px] mt-7 pl-7 pr-7">
+                <div className="mt-7 pl-7 pr-7 mb-7">
                         {loading ? <LoadingCarousel/>  :
                         <Carousel 
                         opts={{
